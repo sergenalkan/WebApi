@@ -1,4 +1,6 @@
-﻿using Entities.Concrete;
+﻿using Business.Dtos.Requests;
+using Business.Dtos.Responses;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,6 @@ namespace Business.Abstracts;
 
 public interface IBrandService
 {
-    CreateBrandResponse Add(CreateBrandRequest brand);
-    List<Brand> GetAll();
+    CreatedBrandResponse Add(CreateBrandRequest createBrandRequest);
+    List<GetAllBrandResponse> GetAll();
 }
